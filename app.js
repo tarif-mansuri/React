@@ -12,7 +12,33 @@
 
 
 //Using React and Babel
-var elementH1 = (
-    <h1 className="heading">This is a heading</h1>
-);
-ReactDOM.createRoot(document.getElementById('container')).render(elementH1);
+// var elementH1 = <>
+//                     <h1 className="heading">This is a heading</h1> 
+//                     <p>This is a paragraph</p>
+//                 </>
+
+
+// function MyComponent(){
+//      return  (
+//         <>
+//             <h1 className="heading">This is a heading</h1>
+//             <p>This is a paragraph</p>
+//         </>
+//      )
+// }
+
+
+var MyComponent = ()=>{
+       return <>
+           <h1 className="heading">This is a heading</h1>
+           <p>This is a paragraph </p>
+       </>
+}
+
+function Component2(){
+      return  <>
+                <h1 className="heading">This is a heading</h1>
+                <p>This is a paragraph </p>
+            </>
+}
+ReactDOM.createRoot(document.getElementById('container')).render(<><MyComponent/> <Component2/> </>);
